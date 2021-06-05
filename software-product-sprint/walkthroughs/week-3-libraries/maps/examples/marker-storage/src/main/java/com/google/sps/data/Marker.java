@@ -1,4 +1,4 @@
-// Copyright 2020 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,17 +12,30 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random fact to the page.
- */
-function addRandomFact() {
-  const facts =
-      ['I am a twin', 'I love swimming!', 'I am from Ghana', 'I live in Accra'];
+package com.google.sps.data;
 
-  // Pick a random fact.
-  const fact = facts[Math.floor(Math.random() * facts.length)];
+/** Represents a marker on the map. */
+public class Marker {
 
-  // Add it to the page.
-  const factContainer = document.getElementById('fact-container');
-  factContainer.innerText = fact;
+  private final double lat;
+  private final double lng;
+  private final String content;
+
+  public Marker(double lat, double lng, String content) {
+    this.lat = lat;
+    this.lng = lng;
+    this.content = content;
+  }
+
+  public double getLat() {
+    return lat;
+  }
+
+  public double getLng() {
+    return lng;
+  }
+
+  public String getContent() {
+    return content;
+  }
 }

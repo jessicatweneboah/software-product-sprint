@@ -13,16 +13,16 @@
 // limitations under the License.
 
 /**
- * Adds a random fact to the page.
+ * Adds a random greeting to the page.
  */
-function addRandomFact() {
-  const facts =
-      ['I am a twin', 'I love swimming!', 'I am from Ghana', 'I live in Accra'];
+function addRandomGreeting() {
+  const greetings =
+      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
-  // Pick a random fact.
-  const fact = facts[Math.floor(Math.random() * facts.length)];
+  // Pick a random greeting.
+  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
   // Add it to the page.
-  const factContainer = document.getElementById('fact-container');
-  factContainer.innerText = fact;
+  const greetingContainer = document.getElementById('greeting-container');
+  greetingContainer.innerText = greeting;
 }

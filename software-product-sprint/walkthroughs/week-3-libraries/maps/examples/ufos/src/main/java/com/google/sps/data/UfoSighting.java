@@ -1,4 +1,4 @@
-// Copyright 2020 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,17 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random fact to the page.
- */
-function addRandomFact() {
-  const facts =
-      ['I am a twin', 'I love swimming!', 'I am from Ghana', 'I live in Accra'];
+package com.google.sps.data;
 
-  // Pick a random fact.
-  const fact = facts[Math.floor(Math.random() * facts.length)];
+/** Represents a UFO sighting at a specific lat lng point. */
+public class UfoSighting {
+  private double lat;
+  private double lng;
 
-  // Add it to the page.
-  const factContainer = document.getElementById('fact-container');
-  factContainer.innerText = fact;
+  public UfoSighting(double lat, double lng) {
+    this.lat = lat;
+    this.lng = lng;
+  }
 }
